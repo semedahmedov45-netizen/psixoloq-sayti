@@ -22,4 +22,32 @@ function removeItem(type,i){data[type].splice(i,1);renderEditors()}
 $("#resetBtn").onclick=()=>{if(confirm("Bütün demo məlumatları sıfırlansın?")){localStorage.removeItem("psychologistSiteData");location.reload()}}
 $("#f-heroImage").onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{data.heroImage=r.result;$("#previewImage").src=r.result};r.readAsDataURL(f)}
 $("#f-aboutImage").onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>data.aboutImage=r.result;r.readAsDataURL(f)}
+// =========================
+// ADMIN DARK / LIGHT MODE
+// =========================
+
+const adminThemeBtn = document.getElementById("adminThemeBtn");
+
+function setAdminTheme(theme) {
+  if (theme === "dark") {
+    document.body.classList.add("admin-dark");
+    adminThemeBtn.textContent = "☀️";
+    adminThemeBtn.title = "Gündüz rejimi";
+    localStorage.setItem("adminTheme", "dark");
+  } else {
+    document.body.classList.remove("admin-dark");
+    adminThemeBtn.textContent = "🌙";
+    adminThemeBtn.title = "Gecə rejimi";
+    localStorage.setItem("adminTheme", "light");
+  }
+}
+
+const savedAdminTheme = localStorage.getItem("adminTheme") || "light";
+setAdminTheme(savedAdminTheme);
+
+adminThemeBtn.addEventListener("click", function () {
+  const isDark = document.body.classList.contains("admin-dark");
+
+  setAdminTheme(isDark ? "light" : "dark");
+});
 fill();
