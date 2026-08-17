@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Premium psixoloq veb-sayt şablonu">
+  <title>Psixoloq Premium</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="#home"><span>Ψ</span> Psixoloq</a>
+      <nav id="mainNav">
+        <a href="#home" data-i18n="nav.home">Ana səhifə</a>
+        <a href="#about" data-i18n="nav.about">Mənim haqqımda</a>
+        <a href="#services" data-i18n="nav.services">Xidmətlər</a>
+        <a href="#articles" data-i18n="nav.articles">Məqalələr</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#contact" data-i18n="nav.contact">Əlaqə</a>
+      </nav>
+      <div class="nav-actions">
+        <select id="languageSelect" aria-label="Language">
+          <option value="az">AZ</option>
+          <option value="en">EN</option>
+          <option value="ru">RU</option>
+        </select>
+        <button id="themeBtn" class="icon-btn" aria-label="Theme">☾</button>
+        <a class="admin-link" href="admin.html">Admin</a>
+        <button id="menuBtn" class="menu-btn">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow" data-i18n="hero.eyebrow">Psixoloji dəstək • Online və canlı</div>
+          <h1 id="heroTitle">Daha sakit, balanslı və özünə inamlı həyat üçün.</h1>
+          <p id="heroText">Peşəkar psixoloji konsultasiya ilə özünüzü daha yaxşı tanımağa və həyatınızdakı dəyişikliklərə addım-addım hazır olmağa başlayın.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary" data-i18n="hero.cta">Konsultasiyaya müraciət et</a>
+            <a href="#about" class="btn btn-secondary" data-i18n="hero.more">Daha ətraflı</a>
+          </div>
+          <div class="trust-row">
+            <div><strong id="experienceValue">8+</strong><span data-i18n="trust.experience">il təcrübə</span></div>
+            <div><strong>1000+</strong><span data-i18n="trust.sessions">konsultasiya</span></div>
+            <div><strong>3</strong><span data-i18n="trust.languages">dil</span></div>
+          </div>
+        </div>
+        <div class="hero-photo-wrap">
+          <div class="leaf leaf-1"></div><div class="leaf leaf-2"></div>
+          <img id="heroImage" src="assets/images/psychologist.svg" alt="Psixoloq">
+          <div class="floating-card">
+            <span class="check">✓</span>
+            <div><strong data-i18n="card.title">Təhlükəsiz məkan</strong><small data-i18n="card.text">Sizi mühakimə etmədən dinləyirik.</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container about-grid">
+        <div class="section-image">
+          <img id="aboutImage" src="assets/images/psychologist.svg" alt="Psixoloq">
+        </div>
+        <div>
+          <span class="section-label" data-i18n="about.label">Mənim haqqımda</span>
+          <h2 id="aboutTitle">Sizin hekayəniz önəmlidir.</h2>
+          <p id="aboutText">Məqsədim sizin üçün rahat və güvənli ünsiyyət mühiti yaratmaq, yaşadığınız çətinlikləri anlamaq və uyğun psixoloji yanaşmanı birlikdə seçməkdir.</p>
+          <div class="info-cards">
+            <div class="info-card"><b id="education">BDU — Psixologiya</b><span data-i18n="about.education">Təhsil</span></div>
+            <div class="info-card"><b id="qualification">Klinik Psixoloq</b><span data-i18n="about.qualification">İxtisas</span></div>
+            <div class="info-card"><b id="sessionMode">Online + Canlı</b><span data-i18n="about.mode">Seans formatı</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section soft">
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="section-label" data-i18n="services.label">İşlədiyim mövzular</span><h2 data-i18n="services.title">Sizə uyğun dəstək</h2></div>
+          <p data-i18n="services.text">Ən çox müraciət edilən psixoloji mövzular üzrə fərdi yanaşma.</p>
+        </div>
+        <div id="servicesGrid" class="cards-grid"></div>
+      </div>
+    </section>
+
+    <section id="articles" class="section">
+      <div class="container">
+        <div class="section-heading"><div><span class="section-label" data-i18n="articles.label">Faydalı məqalələr</span><h2 data-i18n="articles.title">Özünüzü daha yaxşı anlayın</h2></div></div>
+        <div id="articlesGrid" class="articles-grid"></div>
+      </div>
+    </section>
+
+    <section id="faq" class="section soft">
+      <div class="container narrow">
+        <div class="center-heading"><span class="section-label" data-i18n="faq.label">Tez-tez verilən suallar</span><h2 data-i18n="faq.title">Suallarınızın cavabları</h2></div>
+        <div id="faqList" class="faq-list"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container contact-box">
+        <div><span class="section-label light-label" data-i18n="contact.label">Əlaqə</span><h2 data-i18n="contact.title">İlk addımı birlikdə ataq.</h2><p data-i18n="contact.text">Konsultasiya üçün aşağıdakı kanallardan biri ilə əlaqə saxlayın.</p></div>
+        <div class="contact-actions">
+          <a id="whatsappLink" class="btn btn-white" target="_blank" href="https://wa.me/994500000000">WhatsApp</a>
+          <a id="instagramLink" class="btn btn-outline-white" target="_blank" href="#">Instagram</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner"><span>© <span id="year"></span> <span id="footerName">Psixoloq</span></span><span data-i18n="footer.text">Bütün hüquqlar qorunur.</span></div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

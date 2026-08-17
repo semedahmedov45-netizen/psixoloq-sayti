@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Psixoloq Premium — Admin Panel</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="admin-page">
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="index.html"><span>Ψ</span> Psixoloq Admin</a>
+      <div class="nav-actions"><a class="admin-link" href="index.html">Sayta bax</a></div>
+    </div>
+  </header>
+
+  <main class="admin-main">
+    <div class="container admin-layout">
+      <aside class="admin-sidebar">
+        <h3>İdarəetmə</h3>
+        <button class="side-tab active" data-tab="general">Ümumi məlumatlar</button>
+        <button class="side-tab" data-tab="about">Haqqımda</button>
+        <button class="side-tab" data-tab="services">Xidmətlər</button>
+        <button class="side-tab" data-tab="articles">Məqalələr</button>
+        <button class="side-tab" data-tab="faq">FAQ</button>
+        <button class="side-tab" data-tab="contact">Əlaqə</button>
+        <button class="side-tab" data-tab="settings">Sayt ayarları</button>
+      </aside>
+
+      <section class="admin-content">
+        <div id="saveMessage" class="save-message">Dəyişikliklər yadda saxlanıldı.</div>
+
+        <div class="admin-tab active" id="tab-general">
+          <h1>Ümumi məlumatlar</h1><p class="muted">Kod yazmadan əsas məlumatları dəyişin.</p>
+          <div class="form-grid">
+            <label>Psixoloqun adı<input id="f-name"></label>
+            <label>Təcrübə (il)<input id="f-experience"></label>
+            <label>Başlıq<input id="f-heroTitle"></label>
+            <label class="full">Ana səhifə mətni<textarea id="f-heroText"></textarea></label>
+            <label>Profil şəkli<input id="f-heroImage" type="file" accept="image/*"></label>
+            <label>Yeni şəkli burada görəcəksiniz<img id="previewImage" class="admin-preview" src="assets/images/psychologist.svg"></label>
+          </div>
+        </div>
+
+        <div class="admin-tab" id="tab-about">
+          <h1>Haqqımda</h1>
+          <div class="form-grid">
+            <label>Başlıq<input id="f-aboutTitle"></label>
+            <label>Təhsil<input id="f-education"></label>
+            <label>İxtisas<input id="f-qualification"></label>
+            <label>Seans formatı<input id="f-sessionMode"></label>
+            <label class="full">Mətn<textarea id="f-aboutText"></textarea></label>
+            <label>Haqqımda şəkli<input id="f-aboutImage" type="file" accept="image/*"></label>
+          </div>
+        </div>
+
+        <div class="admin-tab" id="tab-services">
+          <h1>Xidmətlər / mövzular</h1>
+          <div id="serviceEditor"></div>
+          <button class="btn btn-primary" id="addService">+ Yeni mövzu</button>
+        </div>
+
+        <div class="admin-tab" id="tab-articles">
+          <h1>Məqalələr</h1>
+          <div id="articleEditor"></div>
+          <button class="btn btn-primary" id="addArticle">+ Yeni məqalə</button>
+        </div>
+
+        <div class="admin-tab" id="tab-faq">
+          <h1>Tez-tez verilən suallar</h1>
+          <div id="faqEditor"></div>
+          <button class="btn btn-primary" id="addFaq">+ Yeni sual</button>
+        </div>
+
+        <div class="admin-tab" id="tab-contact">
+          <h1>Əlaqə və sosial şəbəkələr</h1>
+          <div class="form-grid">
+            <label>WhatsApp nömrəsi<input id="f-whatsapp" placeholder="994501234567"></label>
+            <label>Instagram linki<input id="f-instagram"></label>
+            <label>Facebook linki<input id="f-facebook"></label>
+            <label>YouTube linki<input id="f-youtube"></label>
+            <label>TikTok linki<input id="f-tiktok"></label>
+          </div>
+        </div>
+
+        <div class="admin-tab" id="tab-settings">
+          <h1>Sayt ayarları</h1>
+          <div class="settings-box">
+            <p><strong>3 dil:</strong> Azərbaycan, English, Русский</p>
+            <p><strong>Gündüz/gecə modu:</strong> aktivdir</p>
+            <p><strong>Responsive:</strong> mobil, planşet və kompüter üçün uyğunlaşdırılıb</p>
+            <p><strong>Məlumat saxlama:</strong> demo versiyada brauzerin localStorage yaddaşından istifadə olunur.</p>
+          </div>
+          <button class="btn btn-danger" id="resetBtn">Demo məlumatlarını sıfırla</button>
+        </div>
+
+        <div class="admin-save-bar"><button id="saveBtn" class="btn btn-primary">✓ Dəyişiklikləri yadda saxla</button></div>
+      </section>
+    </div>
+  </main>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>
