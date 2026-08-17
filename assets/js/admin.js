@@ -21,7 +21,25 @@ $("#addFaq").onclick=()=>{data.faq.push({q:{az:"Yeni sual?",en:"New question?",r
 function removeItem(type,i){data[type].splice(i,1);renderEditors()}
 $("#resetBtn").onclick=()=>{if(confirm("Bütün demo məlumatları sıfırlansın?")){localStorage.removeItem("psychologistSiteData");location.reload()}}
 $("#f-heroImage").onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{data.heroImage=r.result;$("#previewImage").src=r.result};r.readAsDataURL(f)}
-$("#f-aboutImage").onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>data.aboutImage=r.result;r.readAsDataURL(f)}
+$("#f-aboutImage").onchange = e => {
+  const f = e.target.files[0];
+
+  if (!f) return;
+
+  const r = new FileReader();
+
+  r.onload = () => {
+    data.aboutImage = r.result;
+
+    const preview = $("#aboutPreviewImage");
+
+    if (preview) {
+      preview.src = r.result;
+    }
+  };
+
+  r.readAsDataURL(f);
+};
 // =========================
 // ADMIN DARK / LIGHT MODE
 // =========================
