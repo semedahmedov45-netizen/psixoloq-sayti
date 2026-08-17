@@ -1,7 +1,29 @@
 let data=loadSiteData();const $=s=>document.querySelector(s);const $$=s=>document.querySelectorAll(s);
 function val(id){return $(id).value}
 function fill(){
-$("#f-name").value=data.name;$("#f-experience").value=data.experience;$("#f-heroTitle").value=data.heroTitle.az;$("#f-heroText").value=data.heroText.az;$("#f-aboutTitle").value=data.aboutTitle.az;$("#f-aboutText").value=data.aboutText.az;$("#f-education").value=data.education;$("#f-qualification").value=data.qualification;$("#f-sessionMode").value=data.sessionMode;$("#f-whatsapp").value=data.whatsapp;$("#f-instagram").value=data.instagram;$("#f-facebook").value=data.facebook;$("#f-youtube").value=data.youtube;$("#f-tiktok").value=data.tiktok;$("#previewImage").src=data.heroImage;renderEditors()}
+$("#f-name").value=data.name;
+$("#f-experience").value=data.experience;
+$("#f-heroTitle").value=data.heroTitle.az;
+$("#f-heroText").value=data.heroText.az;
+$("#f-aboutTitle").value=data.aboutTitle.az;
+$("#f-aboutText").value=data.aboutText.az;
+$("#f-education").value=data.education;
+$("#f-qualification").value=data.qualification;
+$("#f-sessionMode").value=data.sessionMode;
+$("#f-whatsapp").value=data.whatsapp;
+$("#f-instagram").value=data.instagram;
+$("#f-facebook").value=data.facebook;
+$("#f-youtube").value=data.youtube;
+$("#f-tiktok").value=data.tiktok;
+
+$("#previewImage").src=data.heroImage;
+
+if ($("#aboutPreviewImage")) {
+  $("#aboutPreviewImage").src =
+    data.aboutImage || "assets/images/psychologist.svg";
+}
+
+renderEditors()}
 function renderEditors(){
 $("#serviceEditor").innerHTML=data.services.map((x,i)=>`<div class="editor-card"><div class="grid"><label>İkon<input data-s="${i}" data-k="icon" value="${x.icon}"></label><label>AZ başlıq<input data-s="${i}" data-k="title.az" value="${x.title.az}"></label><label>EN başlıq<input data-s="${i}" data-k="title.en" value="${x.title.en}"></label><label>RU başlıq<input data-s="${i}" data-k="title.ru" value="${x.title.ru}"></label><label>AZ mətn<textarea data-s="${i}" data-k="text.az">${x.text.az}</textarea></label><label>EN mətn<textarea data-s="${i}" data-k="text.en">${x.text.en}</textarea></label><label>RU mətn<textarea data-s="${i}" data-k="text.ru">${x.text.ru}</textarea></label></div><button class="remove-btn" onclick="removeItem('services',${i})">Sil</button></div>`).join("");
 $("#articleEditor").innerHTML=data.articles.map((x,i)=>`<div class="editor-card"><div class="grid"><label>Şəkil URL<input data-a="${i}" data-k="image" value="${x.image}"></label><label>AZ başlıq<input data-a="${i}" data-k="title.az" value="${x.title.az}"></label><label>EN başlıq<input data-a="${i}" data-k="title.en" value="${x.title.en}"></label><label>RU başlıq<input data-a="${i}" data-k="title.ru" value="${x.title.ru}"></label><label>AZ mətn<textarea data-a="${i}" data-k="text.az">${x.text.az}</textarea></label><label>EN mətn<textarea data-a="${i}" data-k="text.en">${x.text.en}</textarea></label><label>RU mətn<textarea data-a="${i}" data-k="text.ru">${x.text.ru}</textarea></label></div><button class="remove-btn" onclick="removeItem('articles',${i})">Sil</button></div>`).join("");
