@@ -3,164 +3,528 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Psixoloq Premium — Admin Panel</title>
+
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body class="admin-page">
+
+  <!-- HEADER -->
   <header class="header">
     <div class="container nav">
-      <a class="logo" href="index.html"><span>Ψ</span> Psixoloq Admin</a>
-   <div class="nav-actions">
-  <button id="adminThemeBtn" class="admin-theme-btn" type="button" title="Gecə/Gündüz rejimi">
-    🌙
-  </button>
-  <a class="admin-link" href="index.html">Sayta bax</a>
-</div>
+
+      <a class="logo" href="index.html">
+        <span>Ψ</span> Psixoloq Admin
+      </a>
+
+      <div class="nav-actions">
+
+        <button
+          id="adminThemeBtn"
+          class="admin-theme-btn"
+          type="button"
+          title="Gecə/Gündüz rejimi"
+        >
+          🌙
+        </button>
+
+        <a class="admin-link" href="index.html">
+          Sayta bax
+        </a>
+
+      </div>
+
     </div>
   </header>
 
+
+  <!-- MAIN -->
   <main class="admin-main">
+
     <div class="container admin-layout">
+
+
+      <!-- SIDEBAR -->
       <aside class="admin-sidebar">
+
         <h3>İdarəetmə</h3>
-        <button class="side-tab active" data-tab="general">Ümumi məlumatlar</button>
-        <button class="side-tab" data-tab="about">Haqqımda</button>
-        <button class="side-tab" data-tab="services">Xidmətlər</button>
-        <button class="side-tab" data-tab="articles">Məqalələr</button>
-        <button class="side-tab" data-tab="faq">FAQ</button>
-        <button class="side-tab" data-tab="contact">Əlaqə</button>
-        <button class="side-tab" data-tab="settings">Sayt ayarları</button>
+
+        <button
+          class="side-tab active"
+          data-tab="general"
+          type="button"
+        >
+          Ümumi məlumatlar
+        </button>
+
+        <button
+          class="side-tab"
+          data-tab="about"
+          type="button"
+        >
+          Haqqımda
+        </button>
+
+        <button
+          class="side-tab"
+          data-tab="services"
+          type="button"
+        >
+          Xidmətlər
+        </button>
+
+        <button
+          class="side-tab"
+          data-tab="articles"
+          type="button"
+        >
+          Məqalələr
+        </button>
+
+        <button
+          class="side-tab"
+          data-tab="faq"
+          type="button"
+        >
+          FAQ
+        </button>
+
+        <button
+          class="side-tab"
+          data-tab="contact"
+          type="button"
+        >
+          Əlaqə
+        </button>
+
+        <button
+          class="side-tab"
+          data-tab="settings"
+          type="button"
+        >
+          Sayt ayarları
+        </button>
+
       </aside>
 
+
+      <!-- CONTENT -->
       <section class="admin-content">
-        <div id="saveMessage" class="save-message">Dəyişikliklər yadda saxlanıldı.</div>
 
-        <div class="admin-tab active" id="tab-general">
-          <h1>Ümumi məlumatlar</h1><p class="muted">Kod yazmadan əsas məlumatları dəyişin.</p>
-          <div class="form-grid">
-            <label>Psixoloqun adı<input id="f-name"></label>
-            <label>Təcrübə (il)<input id="f-experience"></label>
-            <label>Başlıq<input id="f-heroTitle"></label>
-            <label class="full">Ana səhifə mətni<textarea id="f-heroText"></textarea></label>
-            <label>Profil şəkli<input id="f-heroImage" type="file" accept="image/*"></label>
-            <label>Yeni şəkli burada görəcəksiniz<img id="previewImage" class="admin-preview" src="assets/images/psychologist.svg"></label>
-          </div>
+
+        <!-- SAVE MESSAGE -->
+        <div
+          id="saveMessage"
+          class="save-message"
+        >
+          Dəyişikliklər yadda saxlanıldı.
         </div>
 
-        <div class="admin-tab" id="tab-about">
+
+
+        <!-- ========================= -->
+        <!-- ÜMUMİ MƏLUMATLAR -->
+        <!-- ========================= -->
+
+        <div
+          class="admin-tab active"
+          id="tab-general"
+        >
+
+          <h1>Ümumi məlumatlar</h1>
+
+          <p class="muted">
+            Kod yazmadan əsas məlumatları dəyişin.
+          </p>
+
+
+          <div class="form-grid">
+
+
+            <label>
+              Psixoloqun adı
+
+              <input
+                id="f-name"
+                type="text"
+                placeholder="Psixoloqun adı"
+              >
+            </label>
+
+
+            <label>
+              Təcrübə (il)
+
+              <input
+                id="f-experience"
+                type="text"
+                placeholder="5"
+              >
+            </label>
+
+
+            <label>
+              Başlıq
+
+              <input
+                id="f-heroTitle"
+                type="text"
+                placeholder="Psixoloq"
+              >
+            </label>
+
+
+            <label class="full">
+              Ana səhifə mətni
+
+              <textarea
+                id="f-heroText"
+                rows="5"
+                placeholder="Haqqınızda qısa məlumat..."
+              ></textarea>
+            </label>
+
+
+            <!-- HERO IMAGE -->
+            <label>
+              Profil şəkli
+
+              <input
+                id="f-heroImage"
+                type="file"
+                accept="image/*"
+              >
+            </label>
+
+
+            <label>
+              Yeni şəkli burada görəcəksiniz
+
+              <img
+                id="previewImage"
+                class="admin-preview"
+                src="assets/images/psychologist.svg"
+                alt="Profil şəkli önizləməsi"
+              >
+            </label>
+
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ========================= -->
+        <!-- HAQQIMDA -->
+        <!-- ========================= -->
+
+        <div
+          class="admin-tab"
+          id="tab-about"
+        >
+
           <h1>Haqqımda</h1>
-          <div class="form-grid">
-          <label>
-  Haqqımda şəkli
-  <input id="f-aboutImage" type="file" accept="image/*">
-           <img
-  id="aboutPreviewImage"
-  class="admin-preview"
-  src="assets/images/psychologist.svg"
-  alt="Haqqımda şəkli"
-> 
-</label>
 
-<label>
-  Şəkil önizləməsi
-  <img
-    id="aboutPreviewImage"
-    class="admin-preview"
-    src="assets/images/psychologist.svg"
-    alt="Haqqımda şəkli"
-  >
-</label>
+          <p class="muted">
+            Haqqımda bölməsində görünəcək məlumatları dəyişin.
+          </p>
+
+
+          <div class="form-grid">
+
+
+            <!-- ABOUT IMAGE -->
+            <label>
+
+              Haqqımda şəkli
+
+              <input
+                id="f-aboutImage"
+                type="file"
+                accept="image/*"
+              >
+
+              <small>
+                JPG, PNG və digər şəkil formatlarını seçə bilərsiniz.
+              </small>
+
+            </label>
+
+
+            <!-- ABOUT PREVIEW -->
+            <label>
+
+              Şəkil önizləməsi
+
+              <img
+                id="aboutPreviewImage"
+                class="admin-preview"
+                src="assets/images/psychologist.svg"
+                alt="Haqqımda şəkli"
+              >
+
+            </label>
+
+
           </div>
+
         </div>
 
-        <div class="admin-tab" id="tab-services">
+
+
+        <!-- ========================= -->
+        <!-- XİDMƏTLƏR -->
+        <!-- ========================= -->
+
+        <div
+          class="admin-tab"
+          id="tab-services"
+        >
+
           <h1>Xidmətlər / mövzular</h1>
+
           <div id="serviceEditor"></div>
-          <button class="btn btn-primary" id="addService">+ Yeni mövzu</button>
+
+          <button
+            class="btn btn-primary"
+            id="addService"
+            type="button"
+          >
+            + Yeni mövzu
+          </button>
+
         </div>
 
-        <div class="admin-tab" id="tab-articles">
+
+
+        <!-- ========================= -->
+        <!-- MƏQALƏLƏR -->
+        <!-- ========================= -->
+
+        <div
+          class="admin-tab"
+          id="tab-articles"
+        >
+
           <h1>Məqalələr</h1>
+
           <div id="articleEditor"></div>
-          <button class="btn btn-primary" id="addArticle">+ Yeni məqalə</button>
+
+          <button
+            class="btn btn-primary"
+            id="addArticle"
+            type="button"
+          >
+            + Yeni məqalə
+          </button>
+
         </div>
 
-        <div class="admin-tab" id="tab-faq">
+
+
+        <!-- ========================= -->
+        <!-- FAQ -->
+        <!-- ========================= -->
+
+        <div
+          class="admin-tab"
+          id="tab-faq"
+        >
+
           <h1>Tez-tez verilən suallar</h1>
+
           <div id="faqEditor"></div>
-          <button class="btn btn-primary" id="addFaq">+ Yeni sual</button>
+
+          <button
+            class="btn btn-primary"
+            id="addFaq"
+            type="button"
+          >
+            + Yeni sual
+          </button>
+
         </div>
 
-        <div class="admin-tab" id="tab-contact">
+
+
+        <!-- ========================= -->
+        <!-- ƏLAQƏ -->
+        <!-- ========================= -->
+
+        <div
+          class="admin-tab"
+          id="tab-contact"
+        >
+
           <h1>Əlaqə və sosial şəbəkələr</h1>
+
+
           <div class="form-grid">
-           <div class="form-grid">
 
-  <label>
-    WhatsApp nömrəsi
-    <input
-      id="f-whatsapp"
-      type="text"
-      placeholder="994501234567"
-    >
-    <small>+ işarəsi olmadan yazın.</small>
-  </label>
 
-  <label>
-    Instagram
-    <input
-      id="f-instagram"
-      type="url"
-      placeholder="https://instagram.com/istifadeci"
-    >
-  </label>
+            <!-- WHATSAPP -->
+            <label>
 
-  <label>
-    TikTok
-    <input
-      id="f-tiktok"
-      type="url"
-      placeholder="https://tiktok.com/@istifadeci"
-    >
-  </label>
+              WhatsApp nömrəsi
 
-  <label>
-    YouTube
-    <input
-      id="f-youtube"
-      type="url"
-      placeholder="https://youtube.com/@kanal"
-    >
-  </label>
+              <input
+                id="f-whatsapp"
+                type="text"
+                placeholder="994501234567"
+              >
 
-  <label>
-    Facebook
-    <input
-      id="f-facebook"
-      type="url"
-      placeholder="https://facebook.com/istifadeci"
-    >
-  </label>
+              <small>
+                + işarəsi olmadan yazın.
+              </small>
 
-</div>
-        </div>
+            </label>
 
-        <div class="admin-tab" id="tab-settings">
-          <h1>Sayt ayarları</h1>
-          <div class="settings-box">
-            <p><strong>3 dil:</strong> Azərbaycan, English, Русский</p>
-            <p><strong>Gündüz/gecə modu:</strong> aktivdir</p>
-            <p><strong>Responsive:</strong> mobil, planşet və kompüter üçün uyğunlaşdırılıb</p>
-            <p><strong>Məlumat saxlama:</strong> demo versiyada brauzerin localStorage yaddaşından istifadə olunur.</p>
+
+            <!-- INSTAGRAM -->
+            <label>
+
+              Instagram
+
+              <input
+                id="f-instagram"
+                type="url"
+                placeholder="https://instagram.com/istifadeci"
+              >
+
+            </label>
+
+
+            <!-- TIKTOK -->
+            <label>
+
+              TikTok
+
+              <input
+                id="f-tiktok"
+                type="url"
+                placeholder="https://tiktok.com/@istifadeci"
+              >
+
+            </label>
+
+
+            <!-- YOUTUBE -->
+            <label>
+
+              YouTube
+
+              <input
+                id="f-youtube"
+                type="url"
+                placeholder="https://youtube.com/@kanal"
+              >
+
+            </label>
+
+
+            <!-- FACEBOOK -->
+            <label>
+
+              Facebook
+
+              <input
+                id="f-facebook"
+                type="url"
+                placeholder="https://facebook.com/istifadeci"
+              >
+
+            </label>
+
+
           </div>
-          <button class="btn btn-danger" id="resetBtn">Demo məlumatlarını sıfırla</button>
+
         </div>
 
-        <div class="admin-save-bar"><button id="saveBtn" class="btn btn-primary">✓ Dəyişiklikləri yadda saxla</button></div>
+
+
+        <!-- ========================= -->
+        <!-- SAYT AYARLARI -->
+        <!-- ========================= -->
+
+        <div
+          class="admin-tab"
+          id="tab-settings"
+        >
+
+          <h1>Sayt ayarları</h1>
+
+
+          <div class="settings-box">
+
+            <p>
+              <strong>3 dil:</strong>
+              Azərbaycan, English, Русский
+            </p>
+
+            <p>
+              <strong>Gündüz/gecə modu:</strong>
+              aktivdir
+            </p>
+
+            <p>
+              <strong>Responsive:</strong>
+              mobil, planşet və kompüter üçün uyğunlaşdırılıb
+            </p>
+
+            <p>
+              <strong>Məlumat saxlama:</strong>
+              demo versiyada brauzerin localStorage yaddaşından istifadə olunur.
+            </p>
+
+          </div>
+
+
+          <button
+            class="btn btn-danger"
+            id="resetBtn"
+            type="button"
+          >
+            Demo məlumatlarını sıfırla
+          </button>
+
+        </div>
+
+
+
+        <!-- ========================= -->
+        <!-- SAVE BAR -->
+        <!-- ========================= -->
+
+        <div class="admin-save-bar">
+
+          <button
+            id="saveBtn"
+            class="btn btn-primary"
+            type="button"
+          >
+            ✓ Dəyişiklikləri yadda saxla
+          </button>
+
+        </div>
+
+
       </section>
+
     </div>
+
   </main>
+
+
+
+  <!-- JAVASCRIPT -->
+
   <script src="assets/js/data.js"></script>
+
   <script src="assets/js/admin.js"></script>
+
+
 </body>
 </html>
