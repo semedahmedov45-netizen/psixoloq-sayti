@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="az">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Peşəkar psixoloji konsultasiya — online və canlı görüşlər. Anksiyete, stress, panik atak, özünə inam, münasibətlər və şəxsi inkişaf mövzularında dəstək.">
+<meta name="theme-color" content="#2e8c73">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dr. Aytac Ələkbərova — Psixoloq">
+<meta property="og:description" content="Daha sakit, balanslı və özünə inamlı həyat üçün psixoloji dəstək.">
+<meta property="og:image" content="assets/images/psychologist.svg">
+<link rel="canonical" href="https://psixoloq-sayti.netlify.app/">
+<link rel="icon" href="assets/images/psychologist.svg">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Dr. Aytac Ələkbərova — Psixoloq</title>
+</head>
+<body>
+<header class="header">
+ <div class="container nav">
+  <a class="logo" href="#home" aria-label="Ana səhifə"><span>Ψ</span><b id="brandName">Aytac Ələkbərova</b></a>
+  <nav id="mainNav" aria-label="Əsas menyu">
+   <a href="#home" data-i18n="nav.home">Ana səhifə</a><a href="#about" data-i18n="nav.about">Mənim haqqımda</a>
+   <a href="#services" data-i18n="nav.services">Xidmətlər</a><a href="#process" data-i18n="nav.process">Proses</a>
+   <a href="#articles" data-i18n="nav.articles">Məqalələr</a><a href="#faq" data-i18n="nav.faq">FAQ</a><a href="#contact" data-i18n="nav.contact">Əlaqə</a>
+  </nav>
+  <div class="nav-actions"><select id="languageSelect" aria-label="Dil"><option value="az">AZ</option><option value="en">EN</option><option value="ru">RU</option></select><button id="themeBtn" class="icon-btn" aria-label="Tema">☾</button><a class="admin-link" href="admin.html">Admin</a><button id="menuBtn" class="menu-btn" aria-label="Menyu">☰</button></div>
+ </div>
+</header>
+<main>
+<section id="home" class="hero">
+ <div class="container hero-grid">
+  <div class="hero-copy">
+   <div class="eyebrow" data-i18n="hero.eyebrow">Psixoloji dəstək • Online və canlı</div>
+   <p class="hero-name">Dr. Aytac Ələkbərova · <span data-i18n="about.qualification">Klinik Psixoloq</span></p>
+   <h1 id="heroTitle"></h1><p id="heroText"></p>
+   <div class="hero-actions"><button class="btn btn-primary" data-open-booking data-i18n="hero.cta">Konsultasiyaya müraciət et</button><a href="#about" class="btn btn-secondary" data-i18n="hero.more">Daha ətraflı</a></div>
+   <div class="trust-row"><div><strong id="experienceValue">8+</strong><span data-i18n="trust.experience">il təcrübə</span></div><div><strong id="sessionsValue">1000+</strong><span data-i18n="trust.sessions">konsultasiya</span></div><div><strong id="languagesValue">3</strong><span data-i18n="trust.languages">dil</span></div></div>
+  </div>
+  <div class="hero-photo-wrap"><div class="glow"></div><img id="heroImage" src="assets/images/psychologist.svg" alt="Dr. Aytac Ələkbərova — psixoloq"><div class="floating-card"><span class="check">✓</span><div><strong data-i18n="card.title">Təhlükəsiz məkan</strong><small data-i18n="card.text">Sizi mühakimə etmədən dinləyirik.</small></div></div></div>
+ </div>
+</section>
+<section id="about" class="section">
+ <div class="container about-grid"><div class="section-image"><img id="aboutImage" src="assets/images/psychologist.svg" alt="Dr. Aytac Ələkbərova"></div>
+ <div><span class="section-label" data-i18n="about.label">Mənim haqqımda</span><h2 id="aboutTitle"></h2><p id="aboutText"></p>
+ <div class="info-cards"><div class="info-card"><b id="education"></b><span data-i18n="about.education">Təhsil</span></div><div class="info-card"><b id="qualification"></b><span data-i18n="about.qualification">İxtisas</span></div><div class="info-card"><b id="sessionMode"></b><span data-i18n="about.mode">Seans formatı</span></div></div>
+ <div class="mini-trust"><span>✓ <span data-i18n="trust.confidential">Məxfilik</span></span><span>✓ <span data-i18n="trust.individual">Fərdi yanaşma</span></span><span>✓ <span data-i18n="trust.flexible">Rahat format</span></span></div>
+ </div></div>
+</section>
+<section id="services" class="section soft"><div class="container"><div class="section-heading"><div><span class="section-label" data-i18n="services.label">İşlədiyim mövzular</span><h2 data-i18n="services.title">Sizə uyğun dəstək</h2></div><p data-i18n="services.text">Ən çox müraciət edilən psixoloji mövzular üzrə fərdi yanaşma.</p></div><div id="servicesGrid" class="cards-grid"></div></div></section>
+<section id="process" class="section"><div class="container"><div class="center-heading"><span class="section-label" data-i18n="process.label">Necə işləyirik?</span><h2 data-i18n="process.title">Sadə və rahat proses</h2></div><div id="processGrid" class="process-grid"></div></div></section>
+<section class="section soft stats-section"><div class="container stats-grid"><div><strong id="stat1">8+</strong><span data-i18n="stats.one">il peşəkar təcrübə</span></div><div><strong id="stat2">1000+</strong><span data-i18n="stats.two">konsultasiya</span></div><div><strong id="stat3">50–60</strong><span data-i18n="stats.three">dəqiqəlik seans</span></div><div><strong>100%</strong><span data-i18n="stats.four">məxfilik prinsipi</span></div></div></section>
+<section id="articles" class="section"><div class="container"><div class="section-heading"><div><span class="section-label" data-i18n="articles.label">Faydalı məqalələr</span><h2 data-i18n="articles.title">Özünüzü daha yaxşı anlayın</h2></div></div><div id="articlesGrid" class="articles-grid"></div></div></section>
+<section id="testimonials" class="section soft"><div class="container"><div class="center-heading"><span class="section-label" data-i18n="reviews.label">Rəylər</span><h2 data-i18n="reviews.title">Müraciət edənlərin fikirləri</h2><p class="muted" data-i18n="reviews.note">Rəylər yalnız razılıq əsasında və anonim şəkildə paylaşılır.</p></div><div id="reviewsGrid" class="reviews-grid"></div></div></section>
+<section id="faq" class="section"><div class="container narrow"><div class="center-heading"><span class="section-label" data-i18n="faq.label">Tez-tez verilən suallar</span><h2 data-i18n="faq.title">Suallarınızın cavabları</h2></div><div id="faqList" class="faq-list"></div></div></section>
+<section id="contact" class="section contact-section"><div class="container contact-box"><div><span class="section-label light-label" data-i18n="contact.label">Əlaqə</span><h2 data-i18n="contact.title">İlk addımı birlikdə ataq.</h2><p data-i18n="contact.text">Konsultasiya üçün aşağıdakı kanallardan biri ilə əlaqə saxlayın.</p></div><div class="contact-actions"><button class="btn btn-white" data-open-booking data-i18n="contact.booking">Konsultasiya formu</button><a id="whatsappLink" class="btn btn-outline-white" target="_blank" rel="noopener">WhatsApp</a><a id="instagramLink" class="btn btn-outline-white" target="_blank" rel="noopener">Instagram</a></div></div></section>
+<section class="section disclaimer-section"><div class="container narrow"><p class="muted small" data-i18n="disclaimer">Bu sayt ümumi məlumat və konsultasiya müraciəti üçündür. Təcili təhlükə və ya özünüzə/başqasına zərər vermə riski olduqda yerli təcili yardım xidmətlərinə müraciət edin.</p></div></section>
+</main>
+<a id="floatingWhatsapp" class="floating-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">⌕ <span>WhatsApp</span></a>
+<footer class="footer"><div class="container footer-inner"><span>© <span id="year"></span> <span id="footerName">Psixoloq</span></span><span data-i18n="footer.text">Bütün hüquqlar qorunur.</span></div></footer>
+<div id="bookingModal" class="modal" aria-hidden="true"><div class="modal-card"><button class="modal-close" data-close-booking aria-label="Bağla">×</button><span class="section-label" data-i18n="booking.label">Konsultasiya</span><h2 data-i18n="booking.title">Müraciətinizi göndərin</h2><p class="muted" data-i18n="booking.text">Məlumatlarınızı yazın, sizinlə əlaqə saxlayaq.</p><form id="bookingForm" class="booking-form"><label><span data-i18n="form.name">Ad və soyad</span><input name="name" required autocomplete="name"></label><label><span data-i18n="form.phone">Telefon</span><input name="phone" required type="tel" autocomplete="tel" placeholder="+994..."></label><label><span data-i18n="form.mode">Görüş formatı</span><select name="mode"><option value="online" data-i18n="form.online">Online</option><option value="inperson" data-i18n="form.inperson">Canlı</option></select></label><label><span data-i18n="form.message">Qısa qeyd</span><textarea name="message" rows="4"></textarea></label><button class="btn btn-primary" type="submit" data-i18n="form.send">Müraciəti göndər</button><p id="bookingStatus" class="form-status"></p></form></div></div>
+<div id="articleModal" class="modal" aria-hidden="true"><div class="modal-card article-modal"><button class="modal-close" data-close-article aria-label="Bağla">×</button><img id="articleModalImage" alt=""><span id="articleModalLabel" class="section-label"></span><h2 id="articleModalTitle"></h2><p id="articleModalText"></p></div></div>
+<script src="assets/js/data.js"></script><script src="assets/js/app.js"></script>
+</body></html>
